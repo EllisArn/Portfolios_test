@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="CSS/stylePortfolios.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+        <title>Portfolio LA1200</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ellis Arn">
+        <meta name="keywords" content="Portfolio, Portfolios, LA1200, Modul 1200, Modul LA1200, while try catch, while-try-catch">
+        <meta name="description" content="Portfolio vom Modul LA1200 über while-try-catch. (In Englisch)">
+        <meta charset="utf-8">
+    </head>
+
+    <div class="container">
+        <div class="Header"><img class="logo" src="Images/Logo.png" alt="Logo"><span class="titel">LA1200</span></div>
+        <div class="Nav">
+                <button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" id="button1" class="button">Home</button><div id="button2" class="dropdown">
+                <button class="dropbtn">Portfolios</button>
+                <div class="dropdown-content">
+                    <a href="https://ellisarn.github.io/Portfolios/LA1200">LA1200 (EN)</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1300">LA1300</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1400">LA1400</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1550">LA1550</a>
+                </div>
+              </div><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" class="button-top" id="button3">Previous page</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1300'" class="button-top" id="button4">Next page</button>
+            </div>
+        <div class="Aside">
+                <h2 id="AsideTitel">Summary</h2>
+                <p>As long as <span class="codeInText">while</span> is true, the program will loop the code in the while braces.</p>
+                <p><span class="codeInText">if</span> checks whether a number or variable is the same as another or not.</p>
+                <p>You can use <span class="codeInText">else if</span>, if the first <span class="codeInText">if</span> is false, to ask something else.</p>
+                <p class="endOfText"><span class="codeInText">try-catch</span> is to use if multible times and if none of the <span class="codeInText">if</span> statements are true, the program uses the <span class="codeInText">catch</span>.</p>
+        </div>
+        <div class="Inhaltsverzeichnis"><h2 id="toc">Table of contents</h2>
+                <ol class="inhaltsverzeichnisol">    
+                        <li><a class="inhaltsverzeichnisli" href="#ziele">Goals</a></li>
+                        <li><a class="inhaltsverzeichnisli" href="#erklärung">Explanation</a></li>
+                        <li><a class="inhaltsverzeichnisli" href="#bespiel">Example</a></li>
+                        <li><a class="inhaltsverzeichnisli" href="#video">Video</a></li>
+                        <li><a class="inhaltsverzeichnisli" href="#verifikation-und-reflexion">Verification and Reflexion</a></li>
+                        <li><a class="inhaltsverzeichnisli" href="#code">Code</a></li>
+                </ol></div>
+        <div class="Main">
+            <article>
+                <h1>This is a tutorial to the "while-try-catch" command in C#</h1>
+                <h2 id="ziele">Goals</h2>
+                <p>After this the reader should be able to code a program with <span class="codeInText">while-try-catch</span>.</p>
+                <h2 id="erklärung">Explanation for the "while", "if", "else if", "try-catch", commands</h2>
+                <p>As long as <span class="codeInText">while</span> is true, the program will loop the code in the <span class="codeInText">while</span> braces.</p>
+                <pre class="code">
+<span class="codePink">while</span> (<span class="codeLightBlue">x</span> <span class="codeGray">==</span> <span class="codeLimeGreen">100</span>)
+{
+        <span class="codeGreen">// do something</span>
+}</pre>
+                <p><span class="codeInText">if</span> checks whether a number or variable is the same as another or not.</p>
+                <pre class="code">
+<span class="codePink">if</span> (<span class="codeLightBlue">x</span> <span class="codeGray">==</span> <span class="codeLimeGreen">100</span>)
+{
+        <span class="codeGreen">// do something</span>
+}</pre>
+                <p>You can use <span class="codeInText">else if</span>, if the first <span class="codeInText">if</span> is false, to ask something else.</p>
+                <pre class="code">
+<span class="codePink">if</span> (<span class="codeLightBlue">x</span> <span class="codeGray"><</span> <span class="codeLimeGreen">100</span>)
+{
+        <span class="codeGreen">// do something</span>
+}
+                    
+<span class="codePink">else if</span> (<span class="codeLightBlue">x</span> <span class="codeGray">></span> <span class="codeLimeGreen">100</span>)
+{
+        <span class="codeGreen">// do something</span>
+}</pre>
+                <p><span class="codeInText">try-catch</span> is to use <span class="codeInText">if</span> multible times and if none of the <span class="codeInText">if</span> statements are true, the program uses the <span class="codeInText">catch</span>.</p>
+                <p>As an example if you only want numbers, but the users input is a character.</p>
+                <pre class="code">
+<span class="codePink">try</span>
+{
+        <span class="codePink">if</span> (<span class="codeLightBlue">x</span> <span class="codeGray"><</span> <span class="codeLimeGreen">100</span>)
+        {
+                <span class="codeGreen">// do something</span>
+        }
+                
+        <span class="codePink">else if</span> (<span class="codeLightBlue">x</span> <span class="codeGray">></span> <span class="codeLimeGreen">100</span>)
+        {
+                <span class="codeGreen">// do something</span>
+        }
+} 
+
+<span class="codeGreen">// for example if the input is not a number </span>             
+<span class="codePink">catch</span>
+{
+        <span class="codeGreen">// do something</span>
+}</pre>
+                <h2 id="bespiel">Example of everything put together</h2>
+                <p>Everything together could look like this example:</p>
+                <p>This is from my Number Guesser game.</p>
+                <p>You can look at the whole code <a class="link" href="https://github.com/EllisArn/LA1200-NumberGuesser/blob/ellisarn.github.io/Program.cs">here</a>.</p>
+                <pre class="code">
+<span class="codePink">while</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">!=</span> <span class="codeLightBlue">randomNumber</span>)
+{
+    <span class="codePink">try</span>
+    {
+            <span class="codeGreen">// this converts the input into an Int32</span>
+            <span class="codeLightBlue">userGuess</span> <span class="codeGray">=</span> <span class="codeLightGreen">Convert</span><span class="codeGray">.</span><span class="codeYellow">ToInt32</span>(<span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">ReadLine</span>());
+
+            <span class="codeGreen">// Input is above 100</span>
+            <span class="codePink">if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLimeGreen">100</span>)
+            {
+                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input above 100"</span>);
+            }
+        
+            <span class="codeGreen">// Input is lower than 1</span>
+            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLimeGreen">1</span>)
+            {
+                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input lower than 1"</span>);
+            }
+
+            <span class="codeGreen">// Input is lower than the random number</span>
+            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLightBlue">randomNumber</span>)
+            {
+                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too high"</span>);
+            }
+                        
+            <span class="codeGreen">// Input is higher than the random number</span>
+            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLightBlue">randomNumber</span>)
+            {
+                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too low"</span>);
+            }
+
+    }
+                    
+    <span class="codeGreen">// Input is not a number</span>            
+    <span class="codePink">catch</span>
+    {
+            <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error invalid input"</span>);
+            {
+                    <span class="codeLightBlue">userAttempts</span><span class="codeGray">--</span>;
+            }
+    }
+}</pre>
+                <h2 id="video">Video to my Number Guesser</h2>
+                <p>Here is a link to a video of my Number Guesser because it uses <span class="codeInText">while-try-catch</span>.</p>
+                <p>It's in german so don't be confused.</p>
+                <p>(Click on the Image)</p>
+                <a href="https://www.youtube.com/watch?v=aE53JePccuQ"><img id="videoImage" src="Images/LA1200-Bild-Video.png" alt="Bild für Video"></a>
+                <h2 id="verifikation-und-reflexion">Verification and Reflection</h2>
+                <p>I showed this to my brother and he understands it.</p>
+                <p>The project went good, but I had to re-write it once due to visual studio showing me weird errors.</p>
+                <h2 id="code">Code</h2>
+                <p class="endOfText">For just the code click <a class="link" href="https://github.com/EllisArn/LA1200-NumberGuesser/blob/ellisarn.github.io/Program.cs">here</a>.</p>
+            </article>
+        </div>
+        <div class="Nav-bottom"><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" class="Button-bottom" id="button3-bottom">Vorherige Seite</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1300'" class="Button-bottom" id="button4-bottom">Nächste Seite</button></div>
+        <div class="Footer">
+                <ul class="footerul">
+                        <li class="footerli"><a href="https://github.com/EllisArn"><img id="githubLogo" src="Images/githublogo.png" alt="Github Icon">Github</a></li>
+                        <li class="footerli"><a href="mailto:ellisarn@gmail.com">Contact</a></li>
+                        <li class="footerli"><a href="https://ellisarn.github.io/about">About</a></li>
+                        </ul>
+            <p id="copyright">© Ellis Arn 2022</p>
+        </div>
+    </div>
+</html>

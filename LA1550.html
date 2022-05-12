@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <link rel="stylesheet" href="CSS/stylePortfolios.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+        <title>Portfolio LA1550</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ellis Arn">
+        <meta name="keywords" content="Portfolio, Portfolios, LA1550, Modul 1550, Modul LA1550, Robocode, Junior Bot, Juniorbot, Robocode Junior Bot, Robocode Juniorbot">
+        <meta name="description" content="Portfolio vom Modul LA1550 über Robocode und die Strategie meines JuniorBots.">
+        <meta charset="utf-8">
+    </head>
+
+    <div class="container">
+        <div class="Header"><img class="logo" src="Images/Logo.png" alt="Logo"><span class="titel">LA1550</span></div>
+        <div class="Nav">
+            <button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" id="button1" class="button">Home</button><div id="button2" class="dropdown">
+                <button class="dropbtn">Portfolios</button>
+                <div class="dropdown-content">
+                    <a href="https://ellisarn.github.io/Portfolios/LA1200">LA1200 (EN)</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1300">LA1300</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1400">LA1400</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1550">LA1550</a>
+                </div>
+            </div><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1400'" class="button-top" id="button3">Previous page</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios'" class="button-top" id="button4">Next page</button>
+            </div>
+        <div class="Aside"><h2 id="AsideTitel">Zusammen<br id="AsideTitelBr">fassung</h2>
+        <p>In robocode gibt es drei verschiedene Arten von Robotern. Die JuniorRobots, die auf eine Art "vereinfacht" wurden, die Robots oder auch die "normalen" Roboter und die AdvancedRobots, die sehr kompliziert sind und auch Vorhersagen treffen können.</p>
+        <p>In der Phase 1 macht der Roboter zufällige Bewegungen, um es dem Gegner schwerer zu machen. Sobald er einen Gegner sieht, geht er in die Phase 2 über.</p>
+        <p>In der Phase 2 begibt sich der Roboter in den Kampf- bzw. Fokussiermodus. Er dreht sich nicht mehr, aber er fähr immernoch auf einer zufälligen Strecke, die vorher berechnet wurde.</p>
+        <p class="endOfText">Sobald mein Roboter getroffen wurde, Schiesst er dorthin zurück, von wo der Schuss kam. Zusätzlich geht er, solange er den Gegner nicht sieht, in die Phase 1 zurück.</p>
+        </div>
+        <div class="Inhaltsverzeichnis"><h2 id="toc">Inhalts<br id="tocBr">verzeichnis</h2>
+            <ol class="inhaltsverzeichnisol">    
+                <li><a class="inhaltsverzeichnisli" href="#ausgangslage">Ausgangslage</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#ziele">Ziel</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#roboter">Roboter</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#strategie">Strategie</a>
+                    <ol class="listinhaltsverzeichnisol">
+                        <li>4.1. <a class="inhaltsverzeichnisli" href="#strategiePhase1">Phase 1</a></li>
+                        <li>4.2. <a class="inhaltsverzeichnisli" href="#strategiePhase2">Phase 2</a></li>
+                    </ol></li>
+                <li><a class="inhaltsverzeichnisli" href="#video">Video</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#verifikation">Verifikation</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#reflexion">Reflexion</a></li>
+            </ol>
+        </div>
+        <div class="Main"><h1>LA1550_<br id="TitelBr">robocode</h1>
+            <h2 id="ausgangslage">Ausgangslage</h2>
+            <p>Wir haben während drei Wochen ein klassenübergreifendes robocode-Turnier veranstaltet. Robocode ist ein Open-Source-Programmierspiel, bei dem virtuelle Roboter auf einem Spielfeld gegeneinander kämpfen. In robocode kann man seinen eigenen Roboter programmieren. Das geht mit Funktionen, die nur ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist. Z.B: Wenn der Roboter getroffen wird, dann macht der Roboter etwas. Und mit einer Funktion, die jede Runde ausgeführ wird. In dieser Funktion ist normalerweise der Code, der den Roboter bewegt und der Code, der die Umgebung scannt.<br>
+                Im Anhang befindet sich zu einem eine .jar Datei, die man in robocode importieren kann und eine .java Datei, in der einfach nur der Code steht. API: <a class="link" href="https://robocode.sourceforge.io/docs/robocode/robocode/JuniorRobot.html">https://robocode.sourceforge.io/docs/robocode/robocode/JuniorRobot.html</a></p>
+            <h2 id="ziele">Ziel</h2>
+            <p>Das Ziel dieses Portfolios ist, dem Leser die Strategie meines Roboters zu erklären.</p>
+            <h2 id="roboter">Roboter</h2>
+            <p>In robocode gibt es drei verschiedene Arten von Robotern. Die JuniorRobots, die auf eine Art "vereinfacht" wurden, die Robots oder auch die "normalen" Roboter und die AdvancedRobots, die sehr kompliziert sind und auch Vorhersagen treffen können.<br>
+                Wir haben JuniorRobots programmiert, da wir noch nie mit Java und vorallem noch nie mit robocode gearbeitet haben.</p>
+            <h2 id="strategie">Strategie meines Roboters</h2>
+            <h3 id="strategiePhase1">Phase 1</h3>
+            <p>Am Anfang des Kampfes geht mein Roboter in den Normalzustand. Im Normalzustand dreht sich mein Roboter in eine zufällige Richtung, die ich davor immer neu generiere. Nachdem er das gemacht hat, berechnet er die durchschnittliche Länge der Höhe und der Breite des Spielfelds. Mit dem Durchschnitt berechnet er eine zufällige Zahl zwischen einem Zehntel und einem Drittel des Durchschnitts. Diese Zahl ist dann die Länge der Strecke, die er nach Vorne fährt. Und nachdem er angekommen ist, scannt er einmal seine gesamte 360°-Umgebung. Wenn er gegen eine Wand fährt, dann prallt er sozusagen von der Wand ab. Wenn er jemanden sieht, dann geht er in Phase 2 über. Wenn nicht, dann bleibt er in Phase 1.</p>
+            <pre class="code">
+<span class="codePink">if</span> (<span class="codeLightBlue">Start</span> <span class="codeGray">==</span> <span class="codeLimeGreen">0</span>)
+{
+        <span class="codeLightBlue">out</span><span class="codeGray">.</span><span class="codeYellow">println</span>(<span class="codeOrange">"Just being random"</span>);
+        <span class="codeLightBlue">gunsHeading</span> <span class="codeGray">=</span> <span class="codeLightBlue">gunHeading</span>;
+        <span class="codeLightBlue">rd</span> <span class="codeGray">=</span> <span class="codePink">new</span> <span class="codeYellow">Random</span>();
+        <span class="codeBlue">int</span> <span class="codeLightBlue" >turnAngle</span> <span class="codeGray">=</span> <span class="codeLightBlue">rd</span><span class="codeGray">.</span><span class="codeYellow">nextInt</span>(<span class="codeLimeGreen">1</span>, <span class="codeLimeGreen">360</span>);
+        <span class="codeYellow">turnTo</span>(<span class="codeLightBlue" >turnAngle</span>);
+        <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">gunsHeading</span>);
+        <span class="codeBlue">int</span> <span class="codeLightBlue">field</span> <span class="codeGray">=</span> (<span class="codeLightBlue">fieldHeight</span> <span class="codeGray">+</span> <span class="codeLightBlue">fieldWidth</span>) <span class="codeGray">/</span> <span class="codeLimeGreen">2</span>;
+        <span class="codeBlue">int</span> <span class="codeLightBlue">fromField</span> <span class="codeGray">=</span> <span class="codeLightBlue">field</span> <span class="codeGray">/</span> <span class="codeLimeGreen">10</span>;
+        <span class="codeBlue">int</span> <span class="codeLightBlue">toField</span> <span class="codeGray">=</span> <span class="codeLightBlue">field</span> <span class="codeGray">/</span> <span class="codeLimeGreen">3</span>;
+        <span class="codeLightBlue">rd</span> <span class="codeGray">=</span> <span class="codePink">new</span> <span class="codeYellow">Random</span>();
+        <span class="codeYellow">ahead</span>(<span class="codeLightBlue">rd</span><span class="codeGray">.</span><span class="codeYellow">nextInt</span>(<span class="codeLightBlue">fromField</span>, <span class="codeLightBlue">toField</span>));
+        <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">gunsHeading</span>);
+        <span class="codeYellow">turnGunRight</span>>(<span class="codeLimeGreen">360</span>);
+}</pre>
+            <p>Wand Abprall:</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">onHitWall</span>()
+{
+        <span class="codeYellow">turnTo</span>(<span class="codeGray">-</span><span class="codeLightBlue">hitWallBearing</span>);
+        <span class="codeLightBlue">Start</span> <span class="codeGray">-</span> <span class="codeLimeGreen">0</span>;
+}</pre>
+            <h3 id="strategiePhase2">Phase 2</h3>
+            <p>In der Phase 2 begibt sich der Roboter in den Kampf- bzw. Fokussiermodus. Er dreht sich nicht mehr, aber er fähr immernoch auf einer zufälligen Strecke, die vorher berechnet wurde, um auszuweichen und um seine Zielgenauigkeit zu verbessern. Also eigentlich fährt er in Schritten nach Vorne und schiesst durchgehend auf den Roboter, den er fokussiert, solange er einen Roboter sieht.</p>
+            <pre class="code">
+<span class="codePink">if</span> (<span class="codeLightBlue">Start</span> <span class="codeGray">==</span> <span class="codeLimeGreen">1</span>)
+{
+        <span class="codeLightBlue">out</span><span class="codeGray">.</span><span class="codeYellow">println</span>(<span class="codeOrange">"Focusing"</span>);
+        <span class="codeLightBlue">gunsHeading</span> <span class="codeGray">=</span> <span class="codeLightBlue">gunHeading</span>;
+        <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">gunsHeading</span>);
+        <span class="codeBlue">int</span> <span class="codeLightBlue">field</span> <span class="codeGray">=</span> (<span class="codeLightBlue">fieldHeight</span> <span class="codeGray">+</span> <span class="codeLightBlue">fieldWidth</span>) <span class="codeGray">/</span> <span class="codeLimeGreen">2</span>;
+        <span class="codeBlue">int</span> <span class="codeLightBlue">fromField</span> <span class="codeGray">=</span> <span class="codeLightBlue">field</span> <span class="codeGray">/</span> <span class="codeLimeGreen">10</span>;
+        <span class="codeBlue">int</span> <span class="codeLightBlue">toField</span> <span class="codeGray">=</span> <span class="codeLightBlue">field</span> <span class="codeGray">/</span> <span class="codeLimeGreen">3</span>;
+        <span class="codeLightBlue">rd</span> <span class="codeGray">=</span> <span class="codePink">new</span> <span class="codeYellow">Random</span>();
+        <span class="codeYellow">ahead</span>(<span class="codeLightBlue">rd</span><span class="codeGray">.</span><span class="codeYellow">nextInt</span>(<span class="codeLightBlue">fromField</span>, <span class="codeLightBlue">toField</span>));
+        <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">gunsHeading</span>);
+        <span class="codeYellow">turnGunRight</span>>(<span class="codeLimeGreen">360</span>);
+}</pre>
+            <p>Fokus:</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">onScannedRobot</span>()
+{
+        <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">scannedAngle</span>);
+        <span class="codeLightBlue">Start</span> <span class="codeGray">=</span> <span class="codeLimeGreen">1</span>;
+        <span class="codePink">if</span> (<span class="codeLightBlue">scannedDistance</span> <span class="codeGray"><</span> <span class="codeLimeGreen">400</span>)
+        {
+                <span class="codeYellow">fire</span>(<span class="codeLimeGreen">3</span>);
+        }
+        <span class="codePink">else</span>
+        {
+            <span class="codeYellow">fire</span>(<span class="codeLimeGreen">1</span>);
+        }
+}</pre>
+            <p>Was speziell an meinem Roboter ist, ist seine Rache. sobald mein Roboter getroffen wurde, Schiesst er dorthin zurück, von wo der Schuss kam. Zusätzlich geht er, solange er den Gegner nicht sieht, in die Phase 1 zurück. Das war ziemlich schwer gut zu implementieren und ich habe diesen Code mehrfach komplett umgeschrieben.</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">onHitByBullet</span>()
+{
+        <span class="codeBlue">int</span> <span class="codeLightBlue">angle</span> <span class="codeGray">=</span> <span class="codeLightBlue">hitByBulletAngle</span>;
+        <span class="codePink">if</span> (<span class="codeLightBlue">scannedDistance</span> <span class="codeGray"><</span> <span class="codeLimeGreen">400</span>)
+        {
+                <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">angle</span>);
+                <span class="codeYellow">fire</span>(<span class="codeLimeGreen">3</span>);
+        }
+        <span class="codePink">else</span>
+        {
+                <span class="codeYellow">turnGunTo</span>(<span class="codeLightBlue">angle</span>);
+                <span class="codeYellow">fire</span>(<span class="codeLimeGreen">1</span>);
+        }
+        <span class="codeLightBlue">Start</span> <span class="codeGray">=</span> <span class="codeLimeGreen">0</span>;
+}</pre>
+            <h2 id="video">Video</h2>
+            <p>Ich habe in Video einen Gegner genommen, der auf seinen gegner zustürmt und erst wenn er seinen Gegner trifft, schiesst.<br>
+                Mein Roboter ist der Schwarze.</p>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/RSdzKO0Cu68" allowfullscreen="allowfullscreen"></iframe></div>
+            <p>Alternativ <a class="link" href="https://www.youtube.com/watch?v=RSdzKO0Cu68">hier</a> auf Youtube.</p>    
+            <h2 id="verifikation">Verifikation</h2>
+            <p>Ich habe mein Portfolio einem Klassenkameraden gezeigt und er hat mir gesagt, dass er die Strategie meines Roboters verstanden hat.</p>
+            <h2 id="reflexion">Reflexion & VBV</h2>
+            <p class="endOfText">Da die Roboter in Java geschrieben werden und wir normalerweise in C# schreiben, musste ich mich anfangs etwas daran gewöhnen, aber eigentlich ging es ganz gut, da C# und Java relativ ähnlich sind. Die API war etwas sehr hilfreiches. Ohne die API hätte ich wahrscheinlich nicht den Roboter, den ich gemacht habe, machen können. Ich glaube das schwerste war, dass man bei JuniorBots nicht schauen kann, ob der Roboter, den man gerade abschiesst kaputt ist oder ob er noch am leben ist. Da mein Roboter einer ist, der sich immer nur auf einen Gegner fokussiert war das etwas nervig, da sich mein Roboter, wenn er einen Gegner fokussiert, anders bewegt. Wenn er nicht weiss, ob der Gegner noch lebt, dann bewegt er sich weiter in seiner Kampf-Bewegung, was nicht sehr optimal ist. Ich habe es aber geschafft, den Fehler so gut es geht zu beheben, wodurch aber die Zielgenauigkeit gesunken ist.<br>
+                Es war ebenfalls schwer, den Roboter genau dorthin zurückschiessen zu lassen, von wo er getroffen wurde. Diesen Fehler habe ich aber nach ein paar mal umschreiben ebenfalls behoben.<br>
+                <br>
+                Beim nächsten Mal, wenn ich etwas mit robocode mache, will ich einen normalen oder einen advanced-robot machen der errät, wie er ausweichen muss und wohin der Gegner fährt, um im Voraus zu zielen.<br>
+                Ich werde beim nächsten Mal, egal bei welchem Thema, wenn es eine API gibt, diese am Anfang besser und länger durchlesen, da in der API so viel wichtige Variablen und Funktionen geschrieben sind. Ohne die API hätte ich niemals einen Roboter wie meinen machen können.</p>
+        </div>
+        <div class="Nav-bottom"><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1400'" class="Button-bottom" id="button3-bottom">Vorherige Seite</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios'" class="Button-bottom" id="button4-bottom">Nächste Seite</button></div>
+        <div class="Footer">
+            <ul class="footerul">
+                <li class="footerli"><a href="https://github.com/EllisArn"><img id="githubLogo" src="Images/githublogo.png" alt="Github Icon">Github</a></li>
+                <li class="footerli"><a href="mailto:ellisarn@gmail.com">Kontakt</a></li>
+                <li class="footerli"><a href="https://ellisarn.github.io/about">Über</a></li>
+            </ul>
+            <p id="copyright">© Ellis Arn 2022</p>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <link rel="stylesheet" href="CSS/stylePortfolios.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+        <title>Portfolio LA1400</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ellis Arn">
+        <meta name="keywords" content="Portfolio, Portfolios, LA1400, Modul 1400, Modul LA1400, Winforms, Winforms Button, Winforms Label, Winforms Textbox, Winforms Picturebox">
+        <meta name="description" content="Portfolio vom Modul LA1400 über Winforms.">
+        <meta charset="utf-8">
+    </head>
+
+    <div class="container">
+        <div class="Header"><img class="logo" src="Images/Logo.png" alt="Logo"><span class="titel">LA1400</span></div>
+        <div class="Nav">
+            <button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" id="button1" class="button">Home</button><div id="button2" class="dropdown">
+                <button class="dropbtn">Portfolios</button>
+                <div class="dropdown-content">
+                    <a href="https://ellisarn.github.io/Portfolios/LA1200">LA1200 (EN)</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1300">LA1300</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1400">LA1400</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1550">LA1550</a>
+                </div>
+            </div><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1300'" class="button-top" id="button3">Previous page</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1550'" class="button-top" id="button4">Next page</button>
+            </div>
+        <div class="Aside"><h2 id="AsideTitel">Zusammen<br id="AsideTitelBr">fassung</h2>
+            <p>Ein Button führt einen Code aus, sobald man diesen drückt.</p>
+            <p>Ein Label ist einfach ein Behälter, der Text anzeigen kann.</p>
+            <p>Mit <span class="codeInText">label1.Text = "";</span> kann man den Text im Label, z.B. wenn der Knopf gedrückt wird, ändern.</p>
+            <p>Eine TextBox ermöglicht es dem Benutzer Text einzugeben, den das Programm benutzen kann.</p>
+            <p class="endOfText">Eine PictureBox ist dazu da, ein Bild anzuzeigen. Das kann man mit <span class="codeInText">pictureBox1.Visible</span> machen.</p>
+        </div>
+        <div class="Inhaltsverzeichnis"><h2 id="toc">Inhalts<br id="tocBr">verzeichnis</h2>
+            <ol class="inhaltsverzeichnisol">    
+                <li><a class="inhaltsverzeichnisli" href="#ziele">Ziele</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#erklärung">Erklärung</a>
+                <ol class="listinhaltsverzeichnisol">
+                    <li>2.1. <a class="inhaltsverzeichnisli" href="#erklärungButton">Button</a></li>
+                    <li>2.2. <a class="inhaltsverzeichnisli" href="#erklärungLabel">Label</a></li>
+                    <li>2.3. <a class="inhaltsverzeichnisli" href="#erklärungTextBox">TextBox</a></li>
+                    <li>2.4. <a class="inhaltsverzeichnisli" href="#erklärungPictureBox">PictureBox</a></li>
+                </ol></li>
+                <li><a class="inhaltsverzeichnisli" href="#bild">Bild</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#video">Video</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#verifikation">Verifikation</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#reflexion">Reflexion</a></li>
+            </ol>
+        </div>
+        <div class="Main">
+            <h1>Winforms</h1>
+            <p>Ich habe mit meiner Gruppe mit Winforms ein Hütchenspiel gemacht. Wir haben dafür hauptsächlich Buttons, Labels, textBoxen und pictureBoxen benutzt.</p>
+            <h2 id="ziele">Ziele</h2>
+            <p>Nachdem der Leser fertig ist, weiß er...</p>
+            <p>...wofür man die drei Tools benutzen kann.</p>
+            <p>...wie man die drei Tools sinnvoll implementieren kann.</p>
+            <p>...wie man die drei Tools benutzt.</p>
+            <h2 id="erklärung">Erklärung</h2>
+            <h3 id="erklärungButton">Button</h3>
+            <p>Ein Button führt einen Code aus, sobald man diesen drückt. Im Winforms-Code sieht das so aus:</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">button1_Click</span>(<span class="codeBlue">object</span> <span class="codeLightBlue">sender</span>, <span class="codeLightGreen">EventArgs</span> <span class="codeLightBlue">e</span>)
+{
+        <span class="codeGreen">// Code, der beim drücken ausgeführt werden soll</span>
+}</pre>
+            <p>Das Innere des Buttons ist ein ganz normaler Code, der nur ausgeführt wird, wenn man den Button drückt.</p>
+            <h3 id="erklärungLabel">Label</h3>
+            <p>Ein Label ist einfach ein Behälter, der Text anzeigen kann. Er kann zwar auch ein Bild anzeigen, aber dafür würde ich eher eine pictureBox nehmen. Hier im Beispiel wird der Code ausgeführt, wenn der Text im Label verändert wurde. Im Winforms-Code sieht das so aus:</p>
+            <pre class="code">
+<span class="codeBlue">private</span> <span class="codeBlue">void</span> <span class="codeYellow">label1_TextChanged</span>(<span class="codeBlue">object</span> <span class="codeLightBlue">sender</span>, <span class="codeLightGreen">EventArgs</span> <span class="codeLightBlue">e</span>)
+{
+        <span class="codeGreen">// Code, der beim drücken ausgeführt werden soll</span>
+}</pre>
+            <p>Mit <span class="codeInText">label1.Text = "";</span> kann man den Text im Label, z.B. wenn der Knopf gedrückt wird, ändern. Das sieht dann so aus:</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">button1_Click</span>(<span class="codeBlue">object</span> <span class="codeLightBlue">sender</span>, <span class="codeLightGreen">EventArgs</span> <span class="codeLightBlue">e</span>)
+{
+        label1<span class="codeGray">.</span>Text <span class="codeGray">=</span> <span class="codeOrange">"Hallo"</span>;
+}</pre>
+            <p>Jetzt würde, wenn man den Knopf drückt, der Text im Label zu "Hallo" ändern.</p>
+            <h3 id="erklärungTextBox">TextBox</h3>
+            <p>Eine TextBox ermöglicht es dem Benutzer Text einzugeben, den das Programm benutzen kann. Ich habe in dem Beispiel ein Label, ein Button und eine TextBox benutzt.</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">button1_Click</span>(<span class="codeBlue">object</span> <span class="codeLightBlue">sender</span>, <span class="codeLightGreen">EventArgs</span> <span class="codeLightBlue">e</span>)
+{
+        label1<span class="codeGray">.</span>Text <span class="codeGray">=</span> textBox1<span class="codeGray">.</span>Text;
+}</pre>
+            <p>Jetzt kann der Benutzer etwas in die TextBox eingeben, dann den Button klicken und dann wird das, was er eingegeben hat im Label stehen.</p>
+            <h3 id="erklärungPictureBox">PictureBox</h3>
+            <p>Eine PictureBox ist dazu da, ein Bild anzuzeigen. Ich habe in dem Beispiel einen Button benutzt, und <span class="codeInText">pictureBox1.Visible</span> benutzt.</p>
+            <pre class="code">
+<span class="codeBlue">public</span> <span class="codeBlue">void</span> <span class="codeYellow">button1_Click</span>(<span class="codeBlue">object</span> <span class="codeLightBlue">sender</span>, <span class="codeLightGreen">EventArgs</span> <span class="codeLightBlue">e</span>)
+{
+        pictureBox1<span class="codeGray">.</span>Visible <span class="codeGray">=</span> <span class="codeBlue">false</span>;
+}</pre>
+            <p>Jetzt wird die pictureBox versteckt, sobald man den Button drückt.</p>
+            <h2 id="bild">Bild</h2>
+            <img id="winformsImage" src="Images/winforms.png" alt="Bild von einer Winforms-Anwendung">
+            <h2 id="video">Video</h2>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/hF94VTPIyFs" allowfullscreen="allowfullscreen"></iframe></div>
+            <p>Alternativ <a class="link" href="https://www.youtube.com/watch?v=hF94VTPIyFs">hier</a> auf Youtube.</p>
+            <h2 id="verifikation">Verifikation</h2>
+            <p>Ich habe es einem Mitschüler gezeigt und er hat gesagt, dass mein Portfolio das Thema gut erklärt.</p>
+            <h2 id="reflexion">Reflexion & VBV</h2>
+            <p class="endOfText">Für mich war das Schwerste, den Rekord in einer Datei zu speichern, aber darüber werde ich hier nicht schreiben. Ich habe das Problem zwar irgendwie gelöst, aber ich war nicht wirklich zufrieden. Deshalb will ich dem noch nachgehen. Ausserdem war die Kommunikation in der Gruppe etwas schwer. Die will ich beim nächsten Mal auch noch verbessern.</p>
+        </div>
+        <div class="Nav-bottom"><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1300'" class="Button-bottom" id="button3-bottom">Vorherige Seite</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1550'" class="Button-bottom" id="button4-bottom">Nächste Seite</button></div>
+        <div class="Footer">
+            <ul class="footerul">
+                <li class="footerli"><a href="https://github.com/EllisArn"><img id="githubLogo" src="Images/githublogo.png" alt="Github Icon">Github</a></li>
+                <li class="footerli"><a href="mailto:ellisarn@gmail.com">Kontakt</a></li>
+                <li class="footerli"><a href="https://ellisarn.github.io/about">Über</a></li>
+            </ul>
+            <p id="copyright">© Ellis Arn 2022</p>
+        </div>
+    </div>
+</html>

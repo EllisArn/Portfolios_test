@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <link rel="stylesheet" href="CSS/stylePortfolios.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+        <title>Portfolio LA1300</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ellis Arn">
+        <meta name="keywords" content="Portfolio, Portfolios, LA1300, Modul 1300, Modul LA1300, Streamwriter, Streamreader">
+        <meta name="description" content="Portfolio vom Modul LA1300 über Streamwriter und Streamreader.">
+        <meta charset="utf-8">
+    </head>
+
+    <div class="container">
+        <div class="Header"><img class="logo" src="Images/Logo.png" alt="Logo"><span class="titel">LA1300</span></div>
+        <div class="Nav">
+            <button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" id="button1" class="button">Home</button><div id="button2" class="dropdown">
+                <button class="dropbtn">Portfolios</button>
+                <div class="dropdown-content">
+                    <a href="https://ellisarn.github.io/Portfolios/LA1200">LA1200 (EN)</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1300">LA1300</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1400">LA1400</a>
+                    <a href="https://ellisarn.github.io/Portfolios/LA1550">LA1550</a>
+                </div>
+            </div><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1200'" class="button-top" id="button3">Previous page</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1400'" class="button-top" id="button4">Next page</button>
+            </div>
+        <div class="Aside"><h2 id="AsideTitel">Zusammen<br id="AsideTitelBr">fassung</h2>
+            <p>Der SteamWriter implementiert einen TextWriter zum schreiben von Zeichen in einen Stream in einer bestimmten Codierung.</p>
+            <p>Der StreamReader implementiert einen TextReader zum lesen von Zeichen in einen Stream in einer bestimmten Codierung.</p>
+            <p>Um einen StreamWriter oder einen StreamReader zu benutzen muss man <span class="codeInText">using System.IO;</span> benutzen.</p>
+            <p>Bei derDeklaration des Pfades ist es wichtig, ein "@" davor zu setzen.</p>
+            <p><span class="codeInText">.csv</span> ist schneller als <span class="codeInText">.txt</span>.</p>
+            <p class="endOfText">Man kann mit der <span class="codeInText">File.Create();</span> Methode eine Datei erstellen und gleich mit <span class="codeInText">sw.WriteLine();</span> einen Text in diese Datei schreiben.</p>
+        </div>
+        <div class="Inhaltsverzeichnis"><h2 id="toc">Inhalts<br id="tocBr">verzeichnis</h2>
+            <ol class="inhaltsverzeichnisol">    
+                <li><a class="inhaltsverzeichnisli" href="#ziele">Ziele</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#erklärung">Erklärung</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#anleitung">Anleitung</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#reflexion">Reflexion</a></li>
+                <li><a class="inhaltsverzeichnisli" href="#verifikation">Verifikation</a></li>
+        </ol></div>
+        <div class="Main">
+            <article>
+                <h1>LA1300_<br id="TitelBr">elephant</h1>
+                <p>Ein Vokabeltrainer der Textdateien erstellen und auslesen kann. Geschrieben in C#</p>
+                <h2 id="ziele">Ziele dieses Portfolios</h2>
+                <p>Der Leser soll nach diesem Portfolio verstehen, wie man Dateien mit einem Programm in C# erstellt und ausliest.</p>
+                <h2 id="erklärung">Streamwriter / Streamreader und File-Methode in C#</h2>
+                <p>Der SteamWriter implementiert einen TextWriter zum schreiben von Zeichen in einen Stream in einer bestimmten Codierung.<br>
+                Der StreamReader implementiert einen TextReader zum lesen von Zeichen in einen Stream in einer bestimmten Codierung.<br>
+                Die File-Methode <span class="codeInText">File.Create();</span> erstellt eine Datei an einem zuvor bestimmten Speicherort.<br>
+                Das heisst, dass die File-Methode eine Datei erstellen kann, der Streamreader diese beabeiten kann und dass der StreamReader diese dann auslesen kann.</p>
+                <h2 id="anleitung">Anleitung</h2>
+                <p>Um einen StreamWriter oder einen StreamReader zu benutzen muss man <span class="codeInText">using System.IO;</span> benutzen. Und man muss eine variable mit dem Pfad Deklinieren und Initialisieren. Dabei ist es wichtig, ein "@" davor zu setzen.
+                    Falls man eine Textdatei haben will, würde ich anstatt <span class="codeInText">.txt</span> eher <span class="codeInText">.csv</span> benutzen, weil es ein Bisschen schneller ist.</p>
+                <pre class="code">
+<span class="codeBlue">string</span> <span class="codeLightBlue">yourPath</span> <span class="codeGray">=</span> <span class="codeOrange">@"C:\Users\Public\yourFile.csv"</span>;</pre>
+                <p>Um eine Datei zu erstellen, muss man zuerst abfragen, ob es bereits eine Datei hat. Dann kann man mit dem StreamWriter (sw ist eine Variable) und mit der <span class="codeInText">File.Create();</span> Methode eine Datei erstellen und gleich mit <span class="codeInText">sw.WriteLine();</span> einen Text in diese Datei schreiben.</p>
+                <pre class="code">
+<span class="codePink">if</span> (<span class="codeGray">!</span><span class="codeLightGreen">File</span><span class="codeGray">.</span><span class="codeYellow">Exists</span>(<span class="codeLightBlue">yourPath</span>))
+{
+        <span class="codeBlue">using</span> (<span class="codeLightGreen">StreamWriter</span> <span class="codeLightBlue">sw</span> <span class="codeGray">=</span> <span class="codeLightGreen">File</span><span class="codeGray">.</span><span class="codeYellow">CreateText</span>(<span class="codeLightBlue">yourPath</span>))
+        {
+                <span class="codeLightBlue">sw</span><span class="codeGray">.</span><span class="codeYellow">WrtiteLine</span>(<span class="codeOrange">"text"</span>); 
+        }
+}</pre>
+                <p>Um eine Datei mit einem StreamReader auszulesen, muss man noch einen Streamreader erstellen, der die Datei ausliest. Danach muss man noch ein Array oder eine Liste erstellen, in der die Wörter, die der StreamReader aus der Datei ausliest, gespeichert werden.<br>
+                    Da ich einen text mit 50 Zeilen habe, benutze ich eine <span class="codeInText">for</span>-Schleife, um alle Wörter auszulesen und einen <span class="codeInText">String</span> in dem das jeweilige Wort temporär gespeichert wird, um es von dort in das Array zu speichern.</p>
+                <pre class="code">
+<span class="codeLightGreen">StreamReader</span> <span class="codeLightBlue">text</span> <span class="codeGray">=</span> <span class="codeBlue">new</span> <span class="codeLightGreen">StreamReader</span>(<span class="codeOrange">@"C:\Users\Public\yourFile.csv"</span>);
+<span class="codeDarkGreen">String</span>[] <span class="codeLightBlue">textArr</span> <span class="codeGray">=</span> <span class="codeBlue">new</span> <span class="codeBlue">string</span>[<span class="codeLimeGreen">50</span>];
+<span class="codeBlue">string</span> <span class="codeLightBlue">textLine</span> <span class="codeGray">=</span> <span class="codeLightBlue">text</span><span class="codeGray">.</span><span class="codeYellow">ReadLine</span>();
+                    
+<span class="codePink">for</span> (<span class="codeBlue">for</span> <span class="codeLightBlue">i</span> <span class="codeGray">=</span> <span class="codeLimeGreen">0</span>; <span class="codeLightBlue">i</span> <span class="codeGray"><</span> <span class="codeLimeGreen">50</span>; <span class="codeLightBlue">i</span><span class="codeGray">++</span>)
+{
+        <span class="codeLightBlue">textArr</span>[<span class="codeLightBlue">i</span>] <span class="codeGray">=</span> <span class="codeLightBlue">textLine</span>;
+        <span class="codeLightBlue">textLine</span> <span class="codeGray">=</span> <span class="codeLightBlue">text</span><span class="codeGray">.</span><span class="codeYellow">ReadLine</span>();
+}</pre>
+                <p>Um alle Wörter auf einmal anzuzeigen, kann man <span class="codeInText">foreach</span> benutzen.</p>
+                <pre class="code">
+<span class="codePink">foreach</span> (<span class="codeBlue">var</span> <span class="codeLightBlue">item</span> <span class="codePink">in</span> <span class="codeLightBlue">namesArray</span>)
+{
+        <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">Write</span>(<span class="codeLightBlue">item</span>);
+}</pre>
+                <h2 id="reflexion">Reflexion</h2>
+                <p>Ich habe den StreamWriter und den StreamReader gewählt, weil ich es noch nicht kannte. Ich habe auch gesehen, dass man auch nicht nur Textdateien wie .txt und .csv erstellen kann, sondern auch z.B. .xlsx oder .docx Dateien. Auch wenn ich das noch nicht ganz geschafft hab, da ich die dateien nicht richtig öffnen kann. Das und dass man überhaupt Dateien so einfach erstellen kann, hat mich irgendwie fasziniert und deshalb wollte ich darüber ein Portfolio schreiben. Ich hatte anfangs keine Ahnung davon und ich hatte auch ein paar Probleme aber schlussendlich ging es doch.</p>
+                <h2 id="verifikation">Verifikation</h2>
+                <p class="endOfText">Das nächste Mal werde ich es irgendwie schaffen auch andere Dateientypen, so zu erstellen, dass man sie auch richtig öffnen kann. Und ich werde meinen Code von anfang an übersichtlicher schreiben.</p>
+            </article>
+        </div>
+        <div class="Nav-bottom"><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1200'" class="Button-bottom" id="button3-bottom">Vorherige Seite</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1400'" class="Button-bottom" id="button4-bottom">Nächste Seite</button></div>
+        <div class="Footer">
+            <ul class="footerul">
+                <li class="footerli"><a href="https://github.com/EllisArn"><img id="githubLogo" src="Images/githublogo.png" alt="Github Icon">Github</a></li>
+                <li class="footerli"><a href="mailto:ellisarn@gmail.com">Kontakt</a></li>
+                <li class="footerli"><a href="https://ellisarn.github.io/about">Über</a></li>
+            </ul>
+            <p id="copyright">© Ellis Arn 2022</p>
+        </div>
+    </div>
+</html>
