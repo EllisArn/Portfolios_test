@@ -563,12 +563,6 @@ iframe {
     }
 }
 
-/* @media screen and (max-width: 282px) {
-    #AsideTitelBr {
-        display: block;
-    }
-} */
-
 @media screen and (max-width: 295px) {
     #tocBr {
         display: block;
