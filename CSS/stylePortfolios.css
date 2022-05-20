@@ -221,7 +221,7 @@ p {
 }
 
 .dropdown-content a {
-    color: #FFFFFF;
+    color: #c9d1d9;
     background-color: rgb(22 27 34);
     border: 1px solid #30363d;
     border-radius: 10px;
@@ -268,34 +268,29 @@ p {
     margin-right: 5px;
 }
 
+#github {
+    display: flex;
+    align-items: center;
+}
+
 .footerul {
+    display: flex;
+    gap: 12px 50px;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #0d1117;
-    display: inline-block;
-}
-
-.footerli {
-    float: left;
+    color: #c9d1d9;
 }
 
 .footerli a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0px 50px 12px 0px;
     text-decoration: none;
 }
 
 .footerli a:hover {
     text-decoration: underline;
-}
-
-#placeholderCenter {
-    display: flex;
-    align-items: center;
 }
 
 .link {

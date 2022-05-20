@@ -3,7 +3,6 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="CSS/stylePortfolios.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
         <title>Portfolio LA1200</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Ellis Arn">
@@ -98,45 +97,44 @@
                 <pre class="code">
 <span class="codePink">while</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">!=</span> <span class="codeLightBlue">randomNumber</span>)
 {
-    <span class="codePink">try</span>
-    {
-            <span class="codeGreen">// this converts the input into an Int32</span>
-            <span class="codeLightBlue">userGuess</span> <span class="codeGray">=</span> <span class="codeLightGreen">Convert</span><span class="codeGray">.</span><span class="codeYellow">ToInt32</span>(<span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">ReadLine</span>());
+        <span class="codePink">try</span>
+        {
+                <span class="codeGreen">// this converts the input into an Int32</span>
+                <span class="codeLightBlue">userGuess</span> <span class="codeGray">=</span> <span class="codeLightGreen">Convert</span><span class="codeGray">.</span><span class="codeYellow">ToInt32</span>(<span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">ReadLine</span>());
 
-            <span class="codeGreen">// Input is above 100</span>
-            <span class="codePink">if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLimeGreen">100</span>)
-            {
-                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input above 100"</span>);
-            }
-        
-            <span class="codeGreen">// Input is lower than 1</span>
-            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLimeGreen">1</span>)
-            {
-                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input lower than 1"</span>);
-            }
+                <span class="codeGreen">// Input is above 100</span>
+                <span class="codePink">if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLimeGreen">100</span>)
+                {
+                        <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input above 100"</span>);
+                }
+                
+                <span class="codeGreen">// Input is lower than 1</span>
+                <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLimeGreen">1</span>)
+                {
+                        <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error input lower than 1"</span>);
+                }
 
-            <span class="codeGreen">// Input is lower than the random number</span>
-            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLightBlue">randomNumber</span>)
-            {
-                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too high"</span>);
-            }
+                <span class="codeGreen">// Input is lower than the random number</span>
+                <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray">></span> <span class="codeLightBlue">randomNumber</span>)
+                {
+                        <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too high"</span>);
+                }
+                                
+                <span class="codeGreen">// Input is higher than the random number</span>
+                <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLightBlue">randomNumber</span>)
+                {
+                        <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too low"</span>);
+                }
+        }
                         
-            <span class="codeGreen">// Input is higher than the random number</span>
-            <span class="codePink">else if</span> (<span class="codeLightBlue">userGuess</span> <span class="codeGray"><</span> <span class="codeLightBlue">randomNumber</span>)
-            {
-                    <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Too low"</span>);
-            }
-
-    }
-                    
-    <span class="codeGreen">// Input is not a number</span>            
-    <span class="codePink">catch</span>
-    {
-            <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error invalid input"</span>);
-            {
-                    <span class="codeLightBlue">userAttempts</span><span class="codeGray">--</span>;
-            }
-    }
+        <span class="codeGreen">// Input is not a number</span>            
+        <span class="codePink">catch</span>
+        {
+                <span class="codeLightGreen">Console</span><span class="codeGray">.</span><span class="codeYellow">WriteLine</span>(<span class=" codeOrange">"Error invalid input"</span>);
+                {
+                        <span class="codeLightBlue">userAttempts</span><span class="codeGray">--</span>;
+                }
+        }
 }</pre>
                 <h2 id="video">Video to my Number Guesser</h2>
                 <p>Here is a link to a video of my Number Guesser because it uses <span class="codeInText">while-try-catch</span>.</p>
@@ -153,10 +151,10 @@
         <div class="Nav-bottom"><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/'" class="Button-bottom" id="button3-bottom">Vorherige Seite</button><button onclick="window.location.href = 'https://ellisarn.github.io/Portfolios/LA1300'" class="Button-bottom" id="button4-bottom">Nächste Seite</button></div>
         <div class="Footer">
                 <ul class="footerul">
-                        <li class="footerli"><a href="https://github.com/EllisArn"><img id="githubLogo" src="Images/githublogo.png" alt="Github Icon">Github</a></li>
-                        <li class="footerli"><a href="mailto:ellisarn@gmail.com">Contact</a></li>
-                        <li class="footerli"><a href="https://ellisarn.github.io/about">About</a></li>
-                        </ul>
+                        <li class="footerli"><a href="https://github.com/EllisArn"><span id="github"><img id="githubLogo" src="Images/GitHub.png" alt="Github Icon">Github</span></a></li>
+                        <li class="footerli"><a href="mailto:ellisarn@gmail.com"><span>Kontakt</span></a></li>
+                        <li class="footerli"><a href="https://ellisarn.github.io/about"><span>Über</span></a></li>
+                </ul>
             <p id="copyright">© Ellis Arn 2022</p>
         </div>
     </div>
