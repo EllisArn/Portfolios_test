@@ -238,8 +238,6 @@ li a:hover {
         grid-template-areas:
             "Header"
             "Nav"
-            "Aside"
-            "Inhaltsverzeichnis"
             "Main"
             "Footer";
     }
